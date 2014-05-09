@@ -5,8 +5,8 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.IO; 
-
+using System.IO;
+using System.Configuration;
 
 
 /// <summary>
@@ -28,7 +28,8 @@ public class DataAccess
             try
             {
                // conString = @"Data Source=LAB1-COMP-12;Initial Catalog=Devgiri;Persist Security Info=True;User Id=sa;Password=123";
-                conString = @"Server=9f87815d-349e-469c-af6c-a326008ee284.sqlserver.sequelizer.com;Database=db9f87815d349e469caf6ca326008ee284;User ID=hjdpodlgqlajztqj;Password=LJQS6S7xwxTWtgKFcadYgHqHsAnBrzuyzTtsoqmHyRnjvM5FYBt5QXpcthyCDCg6";
+
+                conString = ConfigurationManager.ConnectionStrings["constr"].ToString();
               //  conString = @"Data Source=.;Initial Catalog=Devgiri;Persist Security Info=True;User Id=sa;Password=123";
                 SqlConn.ConnectionString = conString;
                 sqlCommand = SqlConn.CreateCommand();
