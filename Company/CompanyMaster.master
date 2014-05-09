@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CompanyMaster.master.cs" Inherits="Company_CompanyMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title> Welcome to devgiri job Point</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 89px;
+        }
+        .style3
+        {
+           /* height: 284px;--%>*/
+           height: 180px;
+        }
+        .style5
+        {
+            height:10px;
+        }
+        .style6
+        {
+            width: 108px;
+        }
+        .style7
+        {
+            width: 759px;
+        }
+        .style8
+        {
+            width: 89px;
+            height: 284px;
+        }
+        .style9
+        {
+            width: 89px;
+            height: 31px;
+        }
+        .style10
+        {
+            width: 759px;
+            height: 31px;
+        }
+        .style11
+        {
+            width: 108px;
+            height: 31px;
+        }
+        .style12
+        {
+            height: 31px;
+        }
+    </style>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+   <table class="style1" cellpadding="0" cellspacing="0" border="0" >
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td colspan="2">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+       <tr>
+            <td class="style8">
+                </td>
+            <td class="style3" colspan="2">
+            <div id="header">
+ <div id="logo">
+	<h1><a href="#">Devgiri Engineering Jobs Point</a></h1>
+	<h2><a href="#" id="metamorph">Help You Find Better</a></h2>
+	</div>
+    </div>
+                
+                
+                </td>
+            <td class="style3">
+                </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style5" colspan="2">
+
+            <div id="menu">
+		<ul>
+			<li><a href="CompanyHome.aspx">Home</a></li>
+		
+			<li><a href="postjob.aspx">Post Jobs</a></li>
+          
+			
+			<li><a href="Applied.aspx">Job Application</a></li>
+			<li><asp:LinkButton ID ="lnksignout" runat ="server" Text ="SignOut" 
+                    PostBackUrl="~/frmSignOut.aspx" onclick="lnksignout_Click"></asp:LinkButton></li>
+		</ul>
+	</div>	
+
+               </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style7" bgcolor="#ffffff">
+             
+
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        </asp:ContentPlaceHolder>
+        
+            </td>
+            <td rowspan="3" class="style6" bgcolor="#ffffff">
+                <br />
+                <div id="sidebar2" class="sidebar">
+		<ul>
+			<li>
+				<h2>IT Jobs</h2>
+				<ul>
+                <marquee  behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop()" 
+                    onmouseout="this.start()">
+                 <asp:Repeater ID="Repeater2" runat="server">
+                <ItemTemplate>
+                <asp:LinkButton ID="ITJobId" runat="server" Text='<%#DataBinder.Eval(Container,"DataItem.ITJobHeading") %>'  style="margin-left:20px;"/> <br />
+                 </ItemTemplate>
+                
+                    </asp:Repeater></marquee>
+					
+				</ul>
+			</li>
+			<li>
+				<h2>Management Jobs</h2>
+				<ul>
+                 <marquee  behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop()" 
+                    onmouseout="this.start()">
+                 <asp:Repeater ID="Repeater3" runat="server">
+                <ItemTemplate>
+                <asp:LinkButton ID="MgtJobId" runat="server" Text='<%#DataBinder.Eval(Container,"DataItem.MgtJobHeading") %>'  style="margin-left:20px;"/> <br />
+                 </ItemTemplate>
+                
+                    </asp:Repeater></marquee>
+
+					
+				</ul>
+			</li>
+			<li>
+				<h2>Government Jobs</h2>
+				<ul>
+                <marquee  behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop()" 
+                    onmouseout="this.start()">
+                 <asp:Repeater ID="Repeater4" runat="server">
+                <ItemTemplate>
+                <asp:LinkButton ID="NewsName" runat="server" Text='<%#DataBinder.Eval(Container,"DataItem.GovJobHeading") %>'  style="margin-left:20px;"/> <br />
+                 </ItemTemplate>
+                
+                    </asp:Repeater></marquee>
+
+				
+				</ul>
+			</li>
+		</ul>
+	</div>
+                
+                
+                </td>
+            <td rowspan="3">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style7" bgcolor="#ffffff">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style7" bgcolor="#ffffff">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style9">
+                </td>
+            <td class="style10">
+                </td>
+            <td class="style11">
+                </td>
+            <td class="style12">
+                </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td class="style7">
+                
+                <div id="footer">
+	 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright &copy; 2014.  
+Design by DIEMS Team </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+</div>
+                
+                </td>
+            <td class="style6">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+
+
+    <div>
+    </div>
+ 
+    </form>
+</body>
+</html>
