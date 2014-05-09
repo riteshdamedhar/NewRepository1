@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Company/CompanyMaster.master" AutoEventWireup="true" CodeFile="postjob.aspx.cs" Inherits="Company_postjob" %>
+﻿<%@ page title="" language="C#" masterpagefile="~/Company/CompanyMaster.master" autoeventwireup="true" inherits="Company_postjob, App_Web_yjeehmc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
